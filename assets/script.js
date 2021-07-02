@@ -1,3 +1,9 @@
+// referencing html tags with id using queryselector
+var startButton = document.querySelector("#startButton");
+var textBox = document.querySelector(".question-textbox");
+
+
+
 // an array will hold the questions with the questions themselves inside and object as strings
 // inside the objects the options are in an array because we want to select just one option and not all the options as one string
 
@@ -7,7 +13,6 @@ var questionsAsked = [
         options: ["", "", "", ""],
         answer: ""
     },
-    
     {
         question: "",
         options: ["", "", "", ""],
