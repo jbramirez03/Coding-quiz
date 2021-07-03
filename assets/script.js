@@ -4,11 +4,13 @@ var QuestiontextBox = document.querySelector(".question-textbox");
 var timeCount = document.querySelector(".timer-count");
 var secondsTextbox = document.querySelector(".secondsTextbox");
 
+// index used in the for loop to mark what question user is currently on
+var index = 0;
 
 // making a interval function that creates a timer
 function countdown () {
 // timer variable defined
-var timer = 60;
+var timer = 59;
 
 var timeInterval = setInterval(function () {
     if (timer > 1) {
@@ -27,6 +29,9 @@ var timeInterval = setInterval(function () {
 }, 1000);
 }
 
+startButton.addEventListener("click", function () {
+    countdown();
+})
 // function to render questions
 
 
