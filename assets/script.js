@@ -29,6 +29,7 @@ var timeInterval = setInterval(function () {
     }
 
 }, 1000);
+presentQuestions(index);
 }
 
 function presentQuestions (index) {
@@ -47,6 +48,10 @@ function presentQuestions (index) {
         questionsTextbox.appendChild(createUl);
         createUl.appendChild(createdListItem);
     })
+}
+
+function checkAnswers(event) {
+    var element = event.target;
 }
 
 
