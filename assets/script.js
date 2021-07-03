@@ -1,11 +1,13 @@
 // referencing html tags with id using queryselector
 var startButton = document.querySelector("#startButton");
-var QuestiontextBox = document.querySelector(".question-textbox");
 var timeCount = document.querySelector(".timer-count");
 var secondsTextbox = document.querySelector(".secondsTextbox");
+var questionsTextbox = document.queryCommandValue(".quiz-textbox");
 
 // index used in the for loop to mark what question user is currently on
 var index = 0;
+
+var createUL = document.createElement("ul");
 
 // making a interval function that creates a timer
 function countdown () {
@@ -29,10 +31,32 @@ var timeInterval = setInterval(function () {
 }, 1000);
 }
 
+function presentQuestions (index) {
+    questionsTextbox.innerHTML = "";
+    createUL.innerHTML = "";
+
+    for (var i = 0; i < questionsAsked.length; i++) {
+        var questionPresented = questionsAsked[index].question;
+        var optionPresented = questionsAsked[index].options;
+        questionsTextbox.textContent = questionPresented;
+    }
+
+    optionPresented.forEach(function (newItem) {
+        var createdListItem = document.createElement("li");
+        createdListItem.textContent = newItem;
+        questionsTextbox.appendChild(createUl);
+        createUl.appendChild(createdListItem);
+    })
+}
+
+
+
+
+
 startButton.addEventListener("click", function () {
     countdown();
 })
-// function to render questions
+
 
 
 // an array will hold the questions with the questions themselves inside and object as strings
