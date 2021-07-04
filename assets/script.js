@@ -7,6 +7,7 @@ var choiceReview = document.querySelector("#choiceReview");
 var quizTextbox = document.querySelector(".quiz-textbox");
 var main = document.querySelector("#main");
 var header = document.querySelector("#header");
+var form = document.querySelector("#form");
 var choiceA = document.querySelector("#choiceA");
 var choiceB = document.querySelector("#choiceB");
 var choiceC = document.querySelector("#choiceC");
@@ -114,7 +115,7 @@ renderQuestions();
 function endGame () {
 header.style.opacity = "0";
 quizTextbox.style.display = "none";
+form.style.display = "block";
 
 }
-
 startButton.addEventListener("click", startQuiz);
