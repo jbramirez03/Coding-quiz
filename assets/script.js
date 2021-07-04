@@ -4,64 +4,6 @@ var timeCount = document.querySelector(".timer-count");
 var secondsTextbox = document.querySelector(".secondsTextbox");
 var questionsTextbox = document.queryCommandValue(".quiz-textbox");
 
-// index used in the for loop to mark what question user is currently on
-var index = 0;
-
-var createUL = document.createElement("ul");
-
-// making a interval function that creates a timer
-function countdown () {
-// timer variable defined
-var timer = 59;
-
-var timeInterval = setInterval(function () {
-    if (timer > 1) {
-        timeCount.textContent = timer;
-        timer--;
-    } else if (timer === 1) {
-        timeCount.textContent = timer;
-        timer--;
-        secondsTextbox.textContent = "Second remaining";
-    } else {
-        timeCount.textContent = "";
-        secondsTextbox.textContent = "";
-        clearInterval(timeInterval);
-    }
-
-}, 1000);
-presentQuestions(index);
-}
-
-function presentQuestions (index) {
-    questionsTextbox.innerHTML = "";
-    createUL.innerHTML = "";
-
-    for (var i = 0; i < questionsAsked.length; i++) {
-        var questionPresented = questionsAsked[index].question;
-        var optionPresented = questionsAsked[index].options;
-        questionsTextbox.textContent = questionPresented;
-    }
-
-    optionPresented.forEach(function (newItem) {
-        var createdListItem = document.createElement("li");
-        createdListItem.textContent = newItem;
-        questionsTextbox.appendChild(createUl);
-        createUl.appendChild(createdListItem);
-    })
-}
-
-function checkAnswers(event) {
-    var element = event.target;
-}
-
-
-
-
-
-startButton.addEventListener("click", function () {
-    countdown();
-})
-
 
 
 // an array will hold the questions with the questions themselves inside and object as strings
