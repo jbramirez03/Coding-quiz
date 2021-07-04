@@ -54,7 +54,6 @@ function renderQuestions() {
     choiceC.textContent = questionsAsked[questionsIndex].options[2];
     choiceD.textContent = questionsAsked[questionsIndex].options[3];
 }
-renderQuestions();
 
 function checkChoice (choice) {
 
@@ -62,11 +61,16 @@ function checkChoice (choice) {
         choiceReview.textContent = "Thats Right!"
         numberCorrect++
     } else {
-        timer -10;
+        timer - 10;
         timeCount.textContent = timer;
         choiceReview.textContent = `Oh no that doesn't seem right, the correct answer is ${questionsAsked[questionsIndex].answer}`;
     }
 
     questionsIndex++
 
+    if (questionsIndex < questionsAsked.length) {
+        renderQuestions();
+    } else {
+        
+    }
 }
