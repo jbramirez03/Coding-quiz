@@ -2,12 +2,14 @@
 var startButton = document.querySelector("#startButton");
 var timeCount = document.querySelector(".timer-count");
 var secondsTextbox = document.querySelector(".secondsTextbox");
-var questionsTextbox = document.queryCommandValue(".quiz-textbox");
-var choiceA = document.querySelector("choiceA");
-var choiceB = document.querySelector("choiceB");
-var choiceC = document.querySelector("choiceC");
-var choiceD = document.querySelector("choiceD");
+var questionsTextbox = document.querySelector("#questionBox");
+var choiceA = document.querySelector("#choiceA");
+var choiceB = document.querySelector("#choiceB");
+var choiceC = document.querySelector("#choiceC");
+var choiceD = document.querySelector("#choiceD");
 
+
+var questionsIndex = 0;
 
 
 // an array will hold the questions with the questions themselves inside and object as strings
@@ -43,5 +45,10 @@ var questionsAsked = [
 
 
 function renderQuestions() {
-    
+    questionsTextbox.textContent = questionsAsked[questionsIndex].question;
+    choiceA.textContent = questionsAsked[questionsIndex].options[0];
+    choiceB.textContent = questionsAsked[questionsIndex].options[1];
+    choiceC.textContent = questionsAsked[questionsIndex].options[2];
+    choiceD.textContent = questionsAsked[questionsIndex].options[3];
 }
+renderQuestions();
