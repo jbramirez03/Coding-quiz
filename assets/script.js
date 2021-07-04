@@ -3,6 +3,7 @@ var startButton = document.querySelector("#startButton");
 var timeCount = document.querySelector(".timer-count");
 var secondsTextbox = document.querySelector(".secondsTextbox");
 var questionsTextbox = document.querySelector("#questionBox");
+var choiceReview = document.querySelector("#choiceReview");
 var choiceA = document.querySelector("#choiceA");
 var choiceB = document.querySelector("#choiceB");
 var choiceC = document.querySelector("#choiceC");
@@ -10,7 +11,9 @@ var choiceD = document.querySelector("#choiceD");
 
 
 var questionsIndex = 0;
+var numberCorrect = 0;
 
+timer = 75;
 
 // an array will hold the questions with the questions themselves inside and object as strings
 // inside the objects the options are in an array because we want to select just one option and not all the options as one string
@@ -52,3 +55,18 @@ function renderQuestions() {
     choiceD.textContent = questionsAsked[questionsIndex].options[3];
 }
 renderQuestions();
+
+function checkChoice (choice) {
+
+    if (questionsAsked[questionsIndex].answer === questionsAsked[questionsIndex].options[choice]) {
+        choiceReview.textContent = "Thats Right!"
+        numberCorrect++
+    } else {
+        timer -10;
+        timeCount.textContent = timer;
+        choiceReview.textContent = `Oh no that doesn't seem right, the correct answer is ${questionsAsked[questionsIndex].answer}`;
+    }
+
+    questionsIndex++
+
+}
