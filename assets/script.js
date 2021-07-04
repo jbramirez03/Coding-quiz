@@ -4,6 +4,8 @@ var timeCount = document.querySelector(".timer-count");
 var secondsTextbox = document.querySelector(".secondsTextbox");
 var questionsTextbox = document.querySelector("#questionBox");
 var choiceReview = document.querySelector("#choiceReview");
+var quizTextbox = document.querySelector(".quiz-textbox");
+var main = document.querySelector("#main");
 var header = document.querySelector("#header");
 var choiceA = document.querySelector("#choiceA");
 var choiceB = document.querySelector("#choiceB");
@@ -88,14 +90,31 @@ choiceD.addEventListener("click", optionD);
 
 
 function startQuiz () {
+    var timerSet = setInterval(function() {
+        timer--;
+        timeCount.textContent = timer;
+        if(timer <= 0) {
+        clearInterval(timerSet);
+        if(questionsIndex < questionsAsked.length -1) {
+
+        }
+        }
+    },1000);
+
+
     choiceA.style.display = "block";
     choiceB.style.display = "block";
     choiceC.style.display = "block";
     choiceD.style.display = "block";
     startButton.style.display = "none";
-    header.setAttribute("style", "opacity: 1;");
+    header.style.opacity = "1";
 renderQuestions();
 }
 
+function endGame () {
+header.style.opacity = "0";
+quizTextbox.style.display = "none";
+
+}
 
 startButton.addEventListener("click", startQuiz);
