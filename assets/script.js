@@ -79,3 +79,14 @@ function optionA () { checkChoice(0); }
 function optionB () { checkChoice(1); }
 function optionC () { checkChoice(2); }
 function optionD () { checkChoice(3); }
+
+function startQuiz () {
+    choiceA.style.display = "block";
+    choiceB.style.display = "block";
+    choiceC.style.display = "block";
+    choiceD.style.display = "block";
+    startButton.style.display = "none";
+
+}
+startQuiz();
+renderQuestions();
