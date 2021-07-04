@@ -9,3 +9,18 @@ main {
     align-items: center;
 }
 
+#choiceA {
+    display: none;
+}
+
+#choiceB {
+    display: none;
+}
+
+#choiceC {
+    display: none;
+}
+
+#choiceD {
+    display: none;
+}
