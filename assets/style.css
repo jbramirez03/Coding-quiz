@@ -1,7 +1,10 @@
 header {
+    opacity: 0;
     vertical-align: text-top;
     text-align: right;
 }
+
+
 
 main {
     display: flex;

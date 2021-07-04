@@ -4,6 +4,7 @@ var timeCount = document.querySelector(".timer-count");
 var secondsTextbox = document.querySelector(".secondsTextbox");
 var questionsTextbox = document.querySelector("#questionBox");
 var choiceReview = document.querySelector("#choiceReview");
+var header = document.querySelector("#header");
 var choiceA = document.querySelector("#choiceA");
 var choiceB = document.querySelector("#choiceB");
 var choiceC = document.querySelector("#choiceC");
@@ -92,7 +93,9 @@ function startQuiz () {
     choiceC.style.display = "block";
     choiceD.style.display = "block";
     startButton.style.display = "none";
-
-}
-startQuiz();
+    header.setAttribute("style", "opacity: 1;");
 renderQuestions();
+}
+
+
+startButton.addEventListener("click", startQuiz);
