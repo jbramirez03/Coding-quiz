@@ -123,7 +123,10 @@ scoretext.textContent = `Your final score is ${numberCorrect}`;
 startButton.addEventListener("click", startQuiz);
 
 
+submitButton.addEventListener("click", function () {
 
+    
+});
 
 function getScore () {
 
