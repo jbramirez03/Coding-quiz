@@ -8,6 +8,7 @@ var quizTextbox = document.querySelector(".quiz-textbox");
 var main = document.querySelector("#main");
 var header = document.querySelector("#header");
 var form = document.querySelector("#form");
+var submitButton = document.querySelector("#submit-button");
 var scoretext = document.querySelector("#scoreText");
 var choiceA = document.querySelector("#choiceA");
 var choiceB = document.querySelector("#choiceB");
@@ -120,3 +121,10 @@ form.style.display = "block";
 scoretext.textContent = `Your final score is ${numberCorrect}`;
 }
 startButton.addEventListener("click", startQuiz);
+
+
+
+
+function getScore () {
+
+}
