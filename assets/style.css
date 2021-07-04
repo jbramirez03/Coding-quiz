@@ -1,0 +1,11 @@
+header {
+    vertical-align: text-top;
+    text-align: right;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
