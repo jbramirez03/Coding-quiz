@@ -65,7 +65,7 @@ function checkChoice (choice) {
         choiceReview.textContent = "Thats Right!"
         numberCorrect++
     } else {
-        timer - 10;
+        timer -= 10;
         timeCount.textContent = timer;
         choiceReview.textContent = `Oh no that doesn't seem right, the correct answer is ${questionsAsked[questionsIndex].answer}`;
     }
@@ -75,7 +75,7 @@ function checkChoice (choice) {
     if (questionsIndex < questionsAsked.length) {
         renderQuestions();
     } else {
-
+        endGame();
     }
 }
 
@@ -97,7 +97,7 @@ function startQuiz () {
         if(timer <= 0) {
         clearInterval(timerSet);
         if(questionsIndex < questionsAsked.length -1) {
-
+            endGame();
         }
         }
     },1000);
