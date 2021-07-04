@@ -80,6 +80,12 @@ function optionB () { checkChoice(1); }
 function optionC () { checkChoice(2); }
 function optionD () { checkChoice(3); }
 
+choiceA.addEventListener("click", optionA);
+choiceB.addEventListener("click", optionB);
+choiceC.addEventListener("click", optionC);
+choiceD.addEventListener("click", optionD);
+
+
 function startQuiz () {
     choiceA.style.display = "block";
     choiceB.style.display = "block";
