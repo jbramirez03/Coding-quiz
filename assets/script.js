@@ -3,6 +3,10 @@ var startButton = document.querySelector("#startButton");
 var timeCount = document.querySelector(".timer-count");
 var secondsTextbox = document.querySelector(".secondsTextbox");
 var questionsTextbox = document.queryCommandValue(".quiz-textbox");
+var choiceA = document.querySelector("choiceA");
+var choiceB = document.querySelector("choiceB");
+var choiceC = document.querySelector("choiceC");
+var choiceD = document.querySelector("choiceD");
 
 
 
@@ -36,3 +40,8 @@ var questionsAsked = [
         answer: "all of the above"
     },
 ];
+
+
+function renderQuestions() {
+    
+}
