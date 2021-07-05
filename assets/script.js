@@ -196,6 +196,7 @@ goBack.addEventListener("click", function() {
     
 })
 
-clearInterval.addEventListener("click", function() {
-    
+clearbtn.addEventListener("click", function() {
+    localStorage.removeItem("highscore");
+
 })
