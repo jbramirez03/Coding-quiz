@@ -22,6 +22,9 @@ var choiceC = document.querySelector("#choiceC");
 var choiceD = document.querySelector("#choiceD");
 var clearedMessage = document.querySelector("#clearedText");
 var highscoreList = document.querySelector("#highscores-section");
+var startHighscore = document.querySelector("#start-highscore");
+var startHighscoreBtn = document.querySelector("#start-highscore")
+
 
 
 var questionsIndex = 0;
@@ -112,6 +115,7 @@ function startQuiz () {
         }
     },1000);
 
+    startHighscore.style.display ="none";
     startDiv.style.display = "none";
     quizTextbox.style.display ="block";
     choiceA.style.display = "block";
@@ -207,3 +211,9 @@ clearbtn.addEventListener("click", function() {
     clearedMessage.style.display = "block";
     highscoreList.innerHTML = "";
 })
+
+startHighscoreBtn.addEventListener("click", function(event) {
+    getScore();
+    highscores.style.display = "block";
+    startDiv.style.display = "none";
+});

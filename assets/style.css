@@ -12,6 +12,11 @@ header {
 .highscores-section {
     display: inline;
     float: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    color:rgb(64, 147, 241);
 }
 
 .start-div {
