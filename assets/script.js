@@ -13,6 +13,8 @@ var scoretext = document.querySelector("#scoreText");
 var messageBox = document.querySelector(".submit-message")
 var highscores = document.querySelector("#highscores");
 var userInitials = document.querySelector("#initials");
+var goBack = document.querySelector("#go-back");
+var clearbtn = document.querySelector("#clear");
 var choiceA = document.querySelector("#choiceA");
 var choiceB = document.querySelector("#choiceB");
 var choiceC = document.querySelector("#choiceC");
@@ -107,7 +109,6 @@ function startQuiz () {
         }
     },1000);
 
-
     choiceA.style.display = "block";
     choiceB.style.display = "block";
     choiceC.style.display = "block";
@@ -190,3 +191,11 @@ function getScore () {
 submitButton.addEventListener("click", function(event) {
     storeScores(event);
 });
+
+goBack.addEventListener("click", function() {
+    
+})
+
+clearInterval.addEventListener("click", function() {
+    
+})
