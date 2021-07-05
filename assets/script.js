@@ -133,7 +133,6 @@ function displayMessage (type, message) {
 
 var storageIndex = 0;
 
-// submitButton.addEventListener("click", function (event) 
 
 function storeScores (event) {
     event.preventDefault();
@@ -144,6 +143,7 @@ function storeScores (event) {
     }
 
     form.style.display = "none";
+    highscores.style.display = "block";
 
     var savedScores = localStorage.getItem("highscore");
     var scoreArray;
@@ -165,16 +165,10 @@ function storeScores (event) {
     scoreArrayString = JSON.stringify(scoreArray);
     localStorage.setItem("highscore", scoreArrayString);
 
-    if(userInitials.value === "") {
-       displayMessage("error", "Please enter your intials in order to continue");
-        return;
-    } else { 
-        displayMessage("success", "Your initials have been saved");
-    }
-
+    getScore();
 };
 
-var storageIndex = 0;
+var i = 0;
 
 function getScore () {
    savedScores = localStorage.getItem("highscore");
@@ -187,8 +181,12 @@ function getScore () {
 
    for (; i < storedScores.length; i++) {
        var newScore = document.createElement("p");
-       newScore.textContent = `${storedScores[storageIndex].intials}: ${storedScores[storageIndex].score}`;
+       newScore.textContent = `${storedScores[i].intials}: ${storedScores[i].score}`;
        highscores.appendChild(newScore);
    }
 
 }
+
+submitButton.addEventListener("click", function(event) {
+    storeScores(event);
+});

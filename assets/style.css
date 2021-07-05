@@ -31,3 +31,7 @@ main {
 #form {
     display: none;
 }
+
+#highscores {
+    display: none;
+}
