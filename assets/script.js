@@ -23,7 +23,8 @@ var choiceD = document.querySelector("#choiceD");
 var clearedMessage = document.querySelector("#clearedText");
 var highscoreList = document.querySelector("#highscores-section");
 var startHighscore = document.querySelector("#start-highscore");
-var startHighscoreBtn = document.querySelector("#start-highscore")
+var quizHighscore = document.querySelector("#quiz-highscore");
+var timerDiv = document.querySelector(".timer-textbox");
 
 
 
@@ -212,8 +213,15 @@ clearbtn.addEventListener("click", function() {
     highscoreList.innerHTML = "";
 })
 
-startHighscoreBtn.addEventListener("click", function(event) {
+startHighscore.addEventListener("click", function() {
     getScore();
     highscores.style.display = "block";
     startDiv.style.display = "none";
+});
+
+quizHighscore.addEventListener("click", function() {
+    getScore();
+    highscores.style.display = "block";
+    quizTextbox.style.display = "none";
+    timerDiv.style.display = "none";
 });
