@@ -28,7 +28,7 @@ var questionsAsked = [
     {
         question: "The condition in an if/else estatement is enclosed within ____.",
         options: ["quotes", "parentheses", "curly brackets", "square brackets"],
-        answer: "parantheses"
+        answer: "parentheses"
     },
     {
         question: "Commonly used data types DO NOT include:",
@@ -42,7 +42,7 @@ var questionsAsked = [
     },
     {
         question: "String values must be enclosed within ____ when being assigned to variables.",
-        options: ["curly brackets", "paranthesis", "quotes", "commas"],
+        options: ["curly brackets", "parentheses", "quotes", "commas"],
         answer: "quotes"
     },
     {
