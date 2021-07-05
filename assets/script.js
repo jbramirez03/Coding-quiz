@@ -20,12 +20,14 @@ var choiceA = document.querySelector("#choiceA");
 var choiceB = document.querySelector("#choiceB");
 var choiceC = document.querySelector("#choiceC");
 var choiceD = document.querySelector("#choiceD");
+var clearedMessage = document.querySelector("#clearedText");
+var highscoreList = document.querySelector("#highscores-section");
 
 
 var questionsIndex = 0;
 var numberCorrect = 0;
 
-timer = 75;
+ var timer = 75;
 
 // an array will hold the questions with the questions themselves inside and object as strings
 // inside the objects the options are in an array because we want to select just one option and not all the options as one string
@@ -185,7 +187,7 @@ function getScore () {
    for (; i < storedScores.length; i++) {
        var newScore = document.createElement("p");
        newScore.textContent = `${storedScores[i].intials}: ${storedScores[i].score}`;
-       highscores.appendChild(newScore);
+       highscoreList.appendChild(newScore);
    }
 
 }
@@ -195,10 +197,13 @@ submitButton.addEventListener("click", function(event) {
 });
 
 goBack.addEventListener("click", function() {
-    
+    highscores.style.display = "none";
+    startDiv.style.display = "block";
+    window.location.reload();
 })
 
 clearbtn.addEventListener("click", function() {
-    localStorage.removeItem("highscore");
-
+    window.localStorage.removeItem("highscore");
+    clearedMessage.style.display = "block";
+    highscoreList.innerHTML = "";
 })

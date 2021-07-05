@@ -37,3 +37,7 @@ main {
 #highscores {
     display: none;
 }
+
+#clearedText {
+    display: none;
+}
