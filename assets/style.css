@@ -1,11 +1,26 @@
 header {
     opacity: 0;
+    
+}
+
+.timer-textbox {
     vertical-align: text-top;
-    text-align: right;
+    display: inline;
+    float: right;
+}
+
+.highscores-section {
+    display: inline;
+    float: left;
+}
+
+.start-div {
+    margin-top: 75px;
 }
 
 .quiz-textbox {
     display: none;
+    margin-top: 75px;
 }
 
 main {
@@ -32,10 +47,12 @@ main {
 
 #form {
     display: none;
+    margin-top: 75px;
 }
 
 #highscores {
     display: none;
+    margin-top: 75px;
 }
 
 #clearedText {
