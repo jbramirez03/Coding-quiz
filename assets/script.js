@@ -1,11 +1,9 @@
 // referencing html tags with id using queryselector
 var startButton = document.querySelector("#startButton");
 var timeCount = document.querySelector(".timer-count");
-var secondsTextbox = document.querySelector(".secondsTextbox");
 var questionsTextbox = document.querySelector("#questionBox");
 var choiceReview = document.querySelector("#choiceReview");
 var quizTextbox = document.querySelector(".quiz-textbox");
-var main = document.querySelector("#main");
 var header = document.querySelector("#header");
 var form = document.querySelector("#form");
 var submitButton = document.querySelector("#submit-button");

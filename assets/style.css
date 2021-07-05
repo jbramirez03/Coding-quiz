@@ -3,6 +3,10 @@ header {
     
 }
 
+body {
+    background-color: rgb(223, 223, 223);
+}
+
 .timer-textbox {
     vertical-align: text-top;
     display: inline;
@@ -16,7 +20,7 @@ header {
     border: none;
     cursor: pointer;
     text-decoration: underline;
-    color:rgb(64, 147, 241);
+    color:rgb(173, 143, 255);
 }
 
 .start-div {
@@ -27,13 +31,24 @@ header {
     width: 50px;
     height: 35px;
     padding: 5px;
+    background-color: rgb(173, 143, 255);
+    border-radius: 5px;
+}
+
+#startButton:hover {
+    filter: brightness(120%);
 }
 
 .option-style {
     margin-bottom: 5px;
-    background-color: cornflowerblue;
-    border-radius: 7px;
+    background-color: rgb(173, 143, 255);
+    border-radius: 5px;
     padding: 5px;
+    cursor: pointer;
+}
+
+.option-style:hover {
+    filter: brightness(120%);
 }
 
 .quiz-textbox {
@@ -47,6 +62,18 @@ main {
     align-items: center;
 }
 
+fieldset {
+    padding: 30px;
+    border-radius: 10px;
+}
+
+#initials {
+    margin-top: 10px;
+}
+
+#submit-button {
+    margin-top: 10px;
+}
 
 #choiceA {
     display: none;

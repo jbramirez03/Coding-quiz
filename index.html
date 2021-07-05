@@ -23,13 +23,13 @@
 
             <div class ="start-div">
                 <h1>Quick Coding Quiz</h1>
-                <p>Press button to start Quiz</p>
+                <p>This is a quick quiz reviewing some of the things you have learned in Javascript, let's see how well you do! Press button to start Quiz</p>
                 <button id = "startButton">Start</button>
             </div>
 
             <div class="quiz-textbox">
                 <h1 id="quiz-title">Quick Coding Quiz</h1>
-                <p id = "questionBox">Press button to start quiz</p>
+                <p id = "questionBox"></p>
                 <button class = "option-style" id = "choiceA"></button>
                 <button class = "option-style" id = "choiceB"></button>
                 <button class = "option-style" id = "choiceC"></button>
@@ -39,21 +39,21 @@
             </div>
 
             <form id="form">
-                <p id="scoreText"></p>
+                <h1 id="scoreText"></h1>
                 <fieldset>
                     <legend>User entry</legend>
-                    <label for = "initials">Enter Initials Here:</label><br>
+                    <label for = "initials" id = "initials-label">Enter Initials Here:</label><br>
                     <input type = "text" id = "initials" name = "initials"><br>
-                    <input type ="submit" value="submit" id="submit-button">
+                    <input class = "option-style" type ="submit" value="submit" id="submit-button">
                 </fieldset>
                 <h3 class="submit-message"></h3>
             </form>
 
             <div id="highscores">
-                <button type = "button" id = "go-back">Go Back</button>
-                <button type = "button" id = "clear">Clear highscores</button>
+                <button type = "button" id = "go-back" class = "option-style">Go Back</button>
+                <button type = "button" id = "clear" class = "option-style">Clear highscores</button>
                 <div id="highscores-section"></div>
-                <p id ="clearedText">highscores cleared</p>
+                <p id ="clearedText">Highscores cleared!</p>
             </div>
 
         </main>
