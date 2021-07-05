@@ -10,6 +10,8 @@ var header = document.querySelector("#header");
 var form = document.querySelector("#form");
 var submitButton = document.querySelector("#submit-button");
 var scoretext = document.querySelector("#scoreText");
+var messageBox = document.querySelector(".submit-message")
+var highscores = document.querySelector("#highscores");
 var choiceA = document.querySelector("#choiceA");
 var choiceB = document.querySelector("#choiceB");
 var choiceC = document.querySelector("#choiceC");
@@ -123,11 +125,35 @@ scoretext.textContent = `Your final score is ${numberCorrect}`;
 startButton.addEventListener("click", startQuiz);
 
 
-submitButton.addEventListener("click", function () {
+function displayMessage (type, message) {
+    messageBox.textContent = message;
+    messageBox.setAttribute("class", type);
+}
 
-    
+
+submitButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    var userInitials = document.querySelector("#initials").value;
+    if(userInitials === "") {
+       displayMessage("error", "Please enter your intials in order to continue");
+        return;
+    } else { 
+        displayMessage("success", "Your initials have been saved");
+    }
+
+    localStorage.setItem("intials", userInitials);
+    localStorage.setItem("score", numberCorrect);
+    getScore();
 });
 
 function getScore () {
+    var initialsInput = localStorage.getItem("intials");
+    var userScore = localStorage.getItem("score");
+    if (!initialsInput || !userScore) {
+        return;
+    }
+
+    form.style.display = "none";
+    highscores.textContent = `${initialsInput}: ${userScore}`;
 
 }
