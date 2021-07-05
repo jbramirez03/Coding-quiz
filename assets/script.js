@@ -13,6 +13,7 @@ var scoretext = document.querySelector("#scoreText");
 var messageBox = document.querySelector(".submit-message")
 var highscores = document.querySelector("#highscores");
 var userInitials = document.querySelector("#initials");
+var startDiv = document.querySelector(".start-div")
 var goBack = document.querySelector("#go-back");
 var clearbtn = document.querySelector("#clear");
 var choiceA = document.querySelector("#choiceA");
@@ -109,11 +110,12 @@ function startQuiz () {
         }
     },1000);
 
+    startDiv.style.display = "none";
+    quizTextbox.style.display ="block";
     choiceA.style.display = "block";
     choiceB.style.display = "block";
     choiceC.style.display = "block";
     choiceD.style.display = "block";
-    startButton.style.display = "none";
     header.style.opacity = "1";
 renderQuestions();
 }
