@@ -137,18 +137,28 @@ var storageIndex = 0;
 
 function storeScores (event) {
     event.preventDefault();
+
+    if(userInitials.value === "") {
+        displayMessage("error", "Please enter your intials in order to continue");
+         return;
+    }
+
+    form.style.display = "none";
+
     var savedScores = localStorage.getItem("highscore");
     var scoreArray;
-    var savedScores = {
-        intials: userInitials.value,
-        score: numberCorrect
-    };
+    
 
     if (savedScores === null) {
         scoreArray =[];
     } else {
         scoreArray = JSON.parse(savedScores);
     }
+
+    var savedScores = {
+        intials: userInitials.value,
+        score: numberCorrect
+    };
 
     scoreArray.push(savedScores);
 
@@ -164,6 +174,21 @@ function storeScores (event) {
 
 };
 
+var storageIndex = 0;
+
 function getScore () {
-   
+   savedScores = localStorage.getItem("highscore");
+
+   if(savedScores === null) {
+       return;
+   }
+
+   var storedScores = JSON.parse(savedScores);
+
+   for (; i < storedScores.length; i++) {
+       var newScore = document.createElement("p");
+       newScore.textContent = `${storedScores[storageIndex].intials}: ${storedScores[storageIndex].score}`;
+       highscores.appendChild(newScore);
+   }
+
 }
