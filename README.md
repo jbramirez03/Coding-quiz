@@ -14,17 +14,30 @@ This is a quiz to test some of your fundamental knowledge on Javascript. The qui
 * Click the clear button if you would like your score to be deleted
 <br>
 ## Start screen
+
 ![Start screen](assets/images/startscreen.png)
+
 ## Answer Choices
+
 ![Answer choices](assets/images/answer-choices.png)
+
 ## Answer check
+
 ![Answer check](assets/images/answer-check.png)
+
 ## Initials input
+
 ![Initials input](assets/images/initials-input.png)
+
 ## Error message if no input given
+
 ![No input given](assets/images/input-error.png)
+
 ## Score saved
+
 ![Score saved](assets/images/score-saved.png)
+
 ## If clear is clicked, score is deleted
+
 ![Scores cleared](assets/images/scores-cleared.png)
 
