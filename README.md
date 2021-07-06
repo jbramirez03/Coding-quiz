@@ -26,7 +26,7 @@ Once start button is clicked questions appear and timer begins
 
 ## Answer check
 
-Once you pick and answer a message will display the correct answer and whether or not you got it correct
+Once you pick an answer a message will display the correct answer and whether or not you got it correct
 
 ![Answer check](assets/images/answer-check.png)
 
@@ -38,8 +38,6 @@ Must enter text in intials textbox before clicking submit
 
 ## Error message if no input given
 
-If no input is given an error message appears
-
 ![No input given](assets/images/input-error.png)
 
 ## Score saved
@@ -49,8 +47,6 @@ After you enter intials and click submit your score is saved
 ![Score saved](assets/images/score-saved.png)
 
 ## If clear is clicked, score is deleted
-
-If you hit the clear button your scores will be deleted thus restarting the highscores
 
 ![Scores cleared](assets/images/scores-cleared.png)
 
