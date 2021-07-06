@@ -19,26 +19,26 @@ This is a quiz to test some of your fundamental knowledge on Javascript. The qui
 ![Start screen](assets/images/startscreen.png)
 
 ## Answer Choices
-
+Once start button is clicked questions appear and timer begins
 ![Answer choices](assets/images/answer-choices.png)
 
 ## Answer check
-
+Once you pick and answer a message will display the correct answer and whether or not you got it correct
 ![Answer check](assets/images/answer-check.png)
 
 ## Initials input
-
+Must enter text in intials textbox before clicking submit
 ![Initials input](assets/images/initials-input.png)
 
 ## Error message if no input given
-
+If no input is given an error message appears
 ![No input given](assets/images/input-error.png)
 
 ## Score saved
-
+After you enter intials and click submit your score is saved
 ![Score saved](assets/images/score-saved.png)
 
 ## If clear is clicked, score is deleted
-
+If you hit the clear button your scores will be deleted thus restarting the highscores
 ![Scores cleared](assets/images/scores-cleared.png)
 
