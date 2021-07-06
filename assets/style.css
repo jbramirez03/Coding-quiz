@@ -33,6 +33,7 @@ body {
     padding: 5px;
     background-color: rgb(173, 143, 255);
     border-radius: 5px;
+    cursor: pointer;
 }
 /* when button is hovered over the color gets brighter */
 #startButton:hover {
