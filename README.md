@@ -13,6 +13,7 @@ This is a quiz to test some of your fundamental knowledge on Javascript. The qui
 * Click the go back button in order to return to the beginning screen
 * Click the clear button if you would like your score to be deleted
 <br>
+
 ## Start screen
 
 ![Start screen](assets/images/startscreen.png)
