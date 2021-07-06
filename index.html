@@ -8,9 +8,10 @@
     </head>
 
     <body>
+        <!-- highscore button that displays saved scores and initials -->
         <button class ="highscores-section" id = "start-highscore">Highscores</button>
 
-
+        <!-- header that contains timer text and highscore button that is functional while quiz is running -->
         <header id="header">
             <button class = "highscores-section" id = "quiz-highscore">Highscores</button>
             <div class="timer-textbox">
@@ -20,13 +21,14 @@
         </header>
 
         <main id="main">
-
+            <!-- div that is displayed when page is first booted up -->
             <div class ="start-div">
                 <h1>Quick Coding Quiz</h1>
                 <p>This is a quick quiz reviewing some of the things you have learned in Javascript, let's see how well you do! Press button to start Quiz</p>
                 <button id = "startButton">Start</button>
             </div>
 
+                <!-- div that displays quiz questions and answer choices -->
             <div class="quiz-textbox">
                 <h1 id="quiz-title">Quick Coding Quiz</h1>
                 <p id = "questionBox"></p>
@@ -34,10 +36,11 @@
                 <button class = "option-style" id = "choiceB"></button>
                 <button class = "option-style" id = "choiceC"></button>
                 <button class = "option-style" id = "choiceD"></button>
-
+                <!-- line that displays wrong or correct feedback -->
                 <p id = "choiceReview"></p>
             </div>
 
+            <!-- form that contains initials input and submit button -->
             <form id="form">
                 <h1 id="scoreText"></h1>
                 <fieldset>
@@ -46,13 +49,16 @@
                     <input type = "text" id = "initials" name = "initials"><br>
                     <input class = "option-style" type ="submit" value="submit" id="submit-button">
                 </fieldset>
+                <!-- displays message when initial input is empty -->
                 <h3 class="submit-message"></h3>
             </form>
 
+            <!-- div that displays highscores with saved scores and intials -->
             <div id="highscores">
                 <button type = "button" id = "go-back" class = "option-style">Go Back</button>
                 <button type = "button" id = "clear" class = "option-style">Clear highscores</button>
                 <div id="highscores-section"></div>
+                <!-- message displayed when clear button is pressed -->
                 <p id ="clearedText">Highscores cleared!</p>
             </div>
 

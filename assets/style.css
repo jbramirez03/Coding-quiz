@@ -1,18 +1,18 @@
+/* header contains timer and timer is hidden until start button is pressed */
 header {
     opacity: 0;
-    
 }
-
+/* set background color to page */
 body {
     background-color: rgb(223, 223, 223);
 }
-
+/* aligns timer text to the top right of the document */
 .timer-textbox {
     vertical-align: text-top;
     display: inline;
     float: right;
 }
-
+/* highscore button is set to top left of document */
 .highscores-section {
     display: inline;
     float: left;
@@ -34,7 +34,7 @@ body {
     background-color: rgb(173, 143, 255);
     border-radius: 5px;
 }
-
+/* when button is hovered over the color gets brighter */
 #startButton:hover {
     filter: brightness(120%);
 }
@@ -55,7 +55,7 @@ body {
     display: none;
     margin-top: 75px;
 }
-
+/* flex box is used to get each displayed div in the center of the document */
 main {
     display: flex;
     justify-content: center;
@@ -103,4 +103,8 @@ fieldset {
 
 #clearedText {
     display: none;
+}
+/* if no initials are inputted then the text box displays an error message with red text */
+.error {
+    color: red;
 }
